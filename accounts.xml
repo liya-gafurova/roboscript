@@ -1,0 +1,14 @@
+<accounts count = "3" pages="1">
+    <account id = "123456789">
+        <type>Pro-cent</type>
+        <reg_date>2020-01-01 12:57:23</reg_date>
+    </account>
+    <account id = "987654321">
+        <type>Pro-cent</type>
+        <reg_date>2020-01-03 12:57:23</reg_date>
+    </account>
+    <account id = "000000000">
+        <type>Pro-cent</type>
+        <reg_date>2020-01-02 12:57:23</reg_date>
+    </account>
+</accounts>
