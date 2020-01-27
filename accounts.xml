@@ -11,4 +11,13 @@
         <type>Pro-cent</type>
         <reg_date>2020-01-02 12:57:23</reg_date>
     </account>
+    <account id = "777778000">
+        <type>Pro-cent</type>
+        <reg_date>2020-01-03 12:57:23</reg_date>
+    </account>
+
+    <account id = "987654000">
+        <type>Pro-cent</type>
+        <reg_date>2020-01-03 12:57:23</reg_date>
+    </account>
 </accounts>
