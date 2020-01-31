@@ -103,10 +103,11 @@ def get_data_from_exported_accounts(accounts_filename, tag_name = 'account'):
     return [element.getAttribute('id') for element in xml_account_elemets]
 
 def filter_orders(orders : list, params:dict):
+    default_lowest_date = '1900-01-01 00:00:00'
     # отфильтровать заказы по дате, статусу , продукту
     current_date = datetime.datetime.today()
     # текущая дата - длительность периода подписки
-    earliest_payment_day = current_date - datetime.timedelta(days=params['subscribe_period'])
+    earliest_payment_day = current_date - datetime.timedelta(days=int(params['subscribe_period']))
     filtered_orders = []
     for order in orders:
          # TODO убрать обращение по индексу
@@ -133,7 +134,7 @@ def get_elem_by_name(elem_list, name):
             return  e
 
 
-def get_csv_surveys(username , password, dataurl,course_name , driver_path):
+def get_csv_surveys(username , password, dataurl,course_name , driver_path, needed_fields_survey, file_path):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     driver = webdriver.Chrome(driver_path)  # , options= chrome_options
